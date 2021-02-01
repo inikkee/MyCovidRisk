@@ -1,0 +1,6 @@
+Mitkä kohteet tai tapahtumat ovat valittavissa käyttäjälle?
+Mistä käyttäjä valitsee kohteen? Drop down? Kartta?
+Miten riskin mahdollisuus esitetään? prosenttiarvio?
+
+Matkaajana haluan tietää kuinka riskialtista on mennä 
+tiettyyn kohteeseen jotten saa tartuntaa
