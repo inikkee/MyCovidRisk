@@ -1,0 +1,19 @@
+Mitkä kohteet tai tapahtumat ovat valittavissa käyttäjälle?
+suomi
+Mistä käyttäjä valitsee kohteen? Drop down? Kartta?
+suomi kartta ok + lisäksi ehkä drop down 
+Miten riskin mahdollisuus esitetään? prosenttiarvio?
+
+Matkaajana haluan tietää kuinka riskialtista on mennä 
+tiettyyn kohteeseen jotten saa tartuntaa
+
+MyCovidRisk: Display the risk of getting Covid based 
+on the (to-be) visited location, the number of people in the event 
+etc. No sensors needed but Open Data from 
+THL or google maps or similar
+
+
+thl data 
+google asiakaskäynnit tunneittain
+voi myös feikata dataa
+riski vertailu
