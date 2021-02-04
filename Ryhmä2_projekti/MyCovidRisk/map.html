@@ -20,20 +20,7 @@
   <div id="map"></div>
   <p><a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a
       href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a></p>
-  <script>
-    var map = L.map('map').setView([0, 0], 1);
-    L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX', {
-      tileSize: 512,
-      zoomOffset: -1,
-      minZoom: 1,
-      attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-      crossOrigin: true
-    }).addTo(map);
-
-    //-- markers --//
-    var finMarker = L.marker([64.9147, 26.0673]).addTo(map);
-    finMarker.bindPopup("<b> Finland </b><br><b> 45,482 Confirmed Covid-19 cases</b>").openPopup();
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
