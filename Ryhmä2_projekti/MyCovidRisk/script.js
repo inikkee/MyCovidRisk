@@ -1,6 +1,6 @@
 var maxBounds = L.latLngBounds(
-  L.latLng(70.999999, 31.943049),
-  L.latLng(56.249997, 31.952164)
+  L.latLng(62.999999, 35.999999),
+  L.latLng(66.249997, 20.952164)
 );
 
 var map = L.map("map").setView([0, 0], 1);
@@ -15,6 +15,13 @@ L.tileLayer(
     crossOrigin: true,
   }
 ).addTo(map);
+
+var control = new L.Control.Zoom({ position: 'topright' }).addTo(map);
+
+var offset = map.getSize().x*0.14;
+
+map.panBy(new L.Point(-offset, 0), {animate: false});
+
 
 var myGeoJSON = {
   type: "FeatureCollection",
