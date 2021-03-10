@@ -1,15 +1,19 @@
+/*
 var maxBounds = L.latLngBounds(
-  L.latLng(62.999999, 35.999999),
-  L.latLng(66.249997, 20.952164)
+L.latLng(62.999999, 35.999999),
+L.latLng(66.249997, 20.952164)
 );
+*/
 
-var map = L.map("map").setView([0, 0], 1);
+var map = L.map("map").setView([64.96, 29.59], 6);
 L.tileLayer(
   "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX",
   {
     tileSize: 512,
     zoomOffset: -1,
-    minZoom: 1,
+    minZoom: 0.5,
+    zoomDelta: 0.25,
+    zoomSnap: 0.25,
     attribution:
       '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
     crossOrigin: true,
@@ -23,6 +27,7 @@ var offset = map.getSize().x*0.14;
 map.panBy(new L.Point(-offset, 0), {animate: false});
 
 
+//SHP-alueet
 var myGeoJSON = {
   type: "FeatureCollection",
   features: [
