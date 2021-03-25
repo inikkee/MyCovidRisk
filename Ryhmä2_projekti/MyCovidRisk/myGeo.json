@@ -1,43 +1,13 @@
-/*
-var maxBounds = L.latLngBounds(
-L.latLng(62.999999, 35.999999),
-L.latLng(66.249997, 20.952164)
-);
-*/
-
-var map = L.map("map").setView([64.96, 29.59], 6);
-L.tileLayer(
-  "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX",
-  {
-    tileSize: 512,
-    zoomOffset: -1,
-    minZoom: 0.5,
-    zoomDelta: 0.25,
-    zoomSnap: 0.25,
-    attribution:
-      '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
-    crossOrigin: true,
-  }
-).addTo(map);
-
-var control = new L.Control.Zoom({ position: 'topright' }).addTo(map);
-
-var offset = map.getSize().x*0.14;
-
-map.panBy(new L.Point(-offset, 0), {animate: false});
-
-
-//SHP-alueet 25.3
-var myGeoJSON = {
-  type: "FeatureCollection",
-  features: [
+{
+  "type": "FeatureCollection",
+  "features": [
     {
-      id: "6e7182c0-3f9b-4202-87d5-98a79040a13e",
-      properties: { name: "HUS" , "corona": 344.0},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "6e7182c0-3f9b-4202-87d5-98a79040a13e",
+      "properties": { "name": "HUS" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [23.05237959, 60.10765098],
             [23.07478148, 59.83861162],
@@ -55,18 +25,18 @@ var myGeoJSON = {
             [23.83644599, 60.63920213],
             [23.70322059, 60.32672746],
             [23.67963271, 60.17456975],
-            [23.05237959, 60.10765098],
-          ],
-        ],
-      },
+            [23.05237959, 60.10765098]
+          ]
+        ]
+      }
     },
     {
-      id: "7125d637-9aef-424e-9592-edd8a437f521",
-      properties: { name: "Keski-Pohjanmaa" , "corona": 14.2},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "7125d637-9aef-424e-9592-edd8a437f521",
+      "properties": { "name": "Keski-Pohjanmaa" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [24.37045639, 63.14660881],
             [24.72888674, 63.17695035],
@@ -82,18 +52,18 @@ var myGeoJSON = {
             [23.51918429, 63.52859603],
             [23.65359567, 63.43858334],
             [23.90001654, 63.3181249],
-            [24.37045639, 63.14660881],
-          ],
-        ],
-      },
+            [24.37045639, 63.14660881]
+          ]
+        ]
+      }
     },
     {
-      id: "5ce18b4c-fb4e-4e38-8242-4902062e97f9",
-      properties: { name: "Etel\u00e4-Savo" , "corona": 60.4},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "5ce18b4c-fb4e-4e38-8242-4902062e97f9",
+      "properties": { "name": "Etel\u00e4-Savo" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [28.08917135, 62.15877137],
             [27.57392771, 62.38806609],
@@ -114,18 +84,18 @@ var myGeoJSON = {
             [28.4700036, 61.77978122],
             [27.86515237, 61.89608363],
             [28.20118083, 61.98039052],
-            [28.08917135, 62.15877137],
-          ],
-        ],
-      },
+            [28.08917135, 62.15877137]
+          ]
+        ]
+      }
     },
     {
-      id: "7bbcefc4-2734-47db-a7b5-90b1d40aa1ed",
-      properties: { name: "Pohjois-Savo" , "corona": 49.2},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "7bbcefc4-2734-47db-a7b5-90b1d40aa1ed",
+      "properties": { "name": "Pohjois-Savo" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.09540248, 62.94351881],
             [26.54344043, 62.6259219],
@@ -147,18 +117,18 @@ var myGeoJSON = {
             [26.34182335, 63.57848072],
             [26.11780438, 63.48862538],
             [26.36422525, 63.01476138],
-            [26.09540248, 62.94351881],
-          ],
-        ],
-      },
+            [26.09540248, 62.94351881]
+          ]
+        ]
+      }
     },
     {
-      id: "d12945f0-c2ab-4ffb-bfbc-730cd8569303",
-      properties: { name: "It\u00e4-Savo" , "corona": 40.1},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "d12945f0-c2ab-4ffb-bfbc-730cd8569303",
+      "properties": { "name": "It\u00e4-Savo" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [28.5087613, 61.52461286],
             [28.44760171, 61.77978122],
@@ -171,18 +141,18 @@ var myGeoJSON = {
             [29.45568709, 61.99091253],
             [29.6262515, 61.71796217],
             [28.854471, 61.54872465],
-            [28.5087613, 61.52461286],
-          ],
-        ],
-      },
+            [28.5087613, 61.52461286]
+          ]
+        ]
+      }
     },
     {
-      id: "e9ae644c-97ea-43d9-aa35-168efe7b93da",
-      properties: { name: "Satakunta" , "corona": 46.9},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "e9ae644c-97ea-43d9-aa35-168efe7b93da",
+      "properties": { "name": "Satakunta" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [22.962772, 61.05389289],
             [22.60434164, 62.03579324],
@@ -196,18 +166,18 @@ var myGeoJSON = {
             [21.46184487, 61.03220103],
             [21.75306954, 60.93440384],
             [22.1114999, 60.87994193],
-            [22.962772, 61.05389289],
-          ],
-        ],
-      },
+            [22.962772, 61.05389289]
+          ]
+        ]
+      }
     },
     {
-      id: "c014952e-9c68-4b6e-a2a0-a6551fe52810",
-      properties: { name: "Vaasa" , "corona": 38.9},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "c014952e-9c68-4b6e-a2a0-a6551fe52810",
+      "properties": { "name": "Vaasa" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [21.2602278, 61.9832244],
             [21.64106005, 62.02528673],
@@ -234,18 +204,18 @@ var myGeoJSON = {
             [21.15495661, 62.41256636],
             [21.29719979, 62.33011173],
             [21.35054099, 62.23086659],
-            [21.2602278, 61.9832244],
-          ],
-        ],
-      },
+            [21.2602278, 61.9832244]
+          ]
+        ]
+      }
     },
     {
-      id: "ec4994da-43b5-4820-a112-76a5d32e1f13",
-      properties: { name: "Etel\u00e4-Pohjanmaa" , "corona": 26.5},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "ec4994da-43b5-4820-a112-76a5d32e1f13",
+      "properties": { "name": "Etel\u00e4-Pohjanmaa" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [23.92605358, 62.47380198],
             [23.99325928, 62.3493057],
@@ -266,18 +236,18 @@ var myGeoJSON = {
             [22.60434164, 62.29727932],
             [22.87316441, 62.25559333],
             [23.38840805, 62.41161856],
-            [23.92605358, 62.47380198],
-          ],
-        ],
-      },
+            [23.92605358, 62.47380198]
+          ]
+        ]
+      }
     },
     {
-      id: "d8101c32-14e1-42be-9155-ad87cefbcff6",
-      properties: { name: "Keski-Suomi" , "corona": 78.3},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "d8101c32-14e1-42be-9155-ad87cefbcff6",
+      "properties": { "name": "Keski-Suomi" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.00579489, 61.79037239],
             [26.45383284, 61.99091253],
@@ -300,18 +270,18 @@ var myGeoJSON = {
             [24.91173707, 62.04629612],
             [25.00134466, 61.76144239],
             [25.46814936, 61.6736686],
-            [26.00579489, 61.79037239],
-          ],
-        ],
-      },
+            [26.00579489, 61.79037239]
+          ]
+        ]
+      }
     },
     {
-      id: "9883ca09-928e-4870-befc-b3ddd1f16657",
-      properties: { name: "Kainuu" , "corona": 25.1},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "9883ca09-928e-4870-befc-b3ddd1f16657",
+      "properties": { "name": "Kainuu" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.90187079, 64.0627508],
             [26.67785181, 64.32605186],
@@ -343,18 +313,18 @@ var myGeoJSON = {
             [28.55961119, 63.87596043],
             [28.35799412, 63.7375259],
             [27.68593719, 63.92523672],
-            [26.90187079, 64.0627508],
-          ],
-        ],
-      },
+            [26.90187079, 64.0627508]
+          ]
+        ]
+      }
     },
     {
-      id: "a05281e0-bbbb-478e-a500-e42fd6e24756",
-      properties: { name: "Lappi" , "corona": 33.3},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "a05281e0-bbbb-478e-a500-e42fd6e24756",
+      "properties": { "name": "Lappi" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.31942146, 65.6794372],
             [26.7898613, 65.6794372],
@@ -452,18 +422,18 @@ var myGeoJSON = {
             [26.38662715, 66.19096789],
             [26.61064612, 66.08221377],
             [26.36422525, 65.97299221],
-            [26.31942146, 65.6794372],
-          ],
-        ],
-      },
+            [26.31942146, 65.6794372]
+          ]
+        ]
+      }
     },
     {
-      id: "3bb5d53a-bff0-4c79-8cf7-aa57310fe7e5",
-      properties: { name: "Kanta-H\u00e4me" , "corona": 156.1},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "3bb5d53a-bff0-4c79-8cf7-aa57310fe7e5",
+      "properties": { "name": "Kanta-H\u00e4me" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [24.32928774, 60.54019607],
             [24.5981105, 60.68310748],
@@ -475,18 +445,18 @@ var myGeoJSON = {
             [23.16438907, 60.84722011],
             [23.41080994, 60.71599722],
             [23.83644599, 60.63920213],
-            [24.32928774, 60.54019607],
-          ],
-        ],
-      },
+            [24.32928774, 60.54019607]
+          ]
+        ]
+      }
     },
     {
-      id: "4efab3f0-a85e-4a1e-ad6b-01eb8998ca95",
-      properties: { name: "Pohjois-Karjala" , "corona": 20.2},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "4efab3f0-a85e-4a1e-ad6b-01eb8998ca95",
+      "properties": { "name": "Pohjois-Karjala" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [29.38848139, 62.27363696],
             [29.00764914, 62.1901417],
@@ -521,18 +491,18 @@ var myGeoJSON = {
             [30.01936967, 61.80381046],
             [29.6262515, 61.71796217],
             [29.45568709, 61.99091253],
-            [29.38848139, 62.27363696],
-          ],
-        ],
-      },
+            [29.38848139, 62.27363696]
+          ]
+        ]
+      }
     },
     {
-      id: "a78b7cb7-36e6-4254-9379-985c7af96079",
-      properties: { name: "Etel\u00e4-Karjala", "corona": 157.4 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "a78b7cb7-36e6-4254-9379-985c7af96079",
+      "properties": { "name": "Etel\u00e4-Karjala" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [27.1967306, 61.17293309],
             [27.30874009, 61.34528361],
@@ -541,18 +511,18 @@ var myGeoJSON = {
             [30.01936967, 61.80381046],
             [27.98079701, 60.63920213],
             [27.39834768, 60.87994193],
-            [27.1967306, 61.17293309],
-          ],
-        ],
-      },
+            [27.1967306, 61.17293309]
+          ]
+        ]
+      }
     },
     {
-      id: "8f3792e6-b929-45a8-b8d9-cf270fae2397",
-      properties: { name: "P\u00e4ij\u00e4t-H\u00e4me" , "corona": 192.7},
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "8f3792e6-b929-45a8-b8d9-cf270fae2397",
+      "properties": { "name": "P\u00e4ij\u00e4t-H\u00e4me" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [25.00134466, 61.76144239],
             [25.46814936, 61.6736686],
@@ -573,18 +543,18 @@ var myGeoJSON = {
             [25.20296173, 61.25922652],
             [24.93413897, 61.33453939],
             [24.93413897, 61.52737228],
-            [25.00134466, 61.76144239],
-          ],
-        ],
-      },
+            [25.00134466, 61.76144239]
+          ]
+        ]
+      }
     },
     {
-      id: "76d99c52-0e4e-46c2-9585-698247acaf9c",
-      properties: { name: "Pirkanmaa", "corona": 99.8 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "76d99c52-0e4e-46c2-9585-698247acaf9c",
+      "properties": { "name": "Pirkanmaa" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [23.23159477, 60.9996354],
             [23.63482892, 60.94528506],
@@ -605,18 +575,18 @@ var myGeoJSON = {
             [22.82836061, 61.36676101],
             [22.9403701, 61.25922652],
             [22.9403701, 61.03220103],
-            [23.23159477, 60.9996354],
-          ],
-        ],
-      },
+            [23.23159477, 60.9996354]
+          ]
+        ]
+      }
     },
     {
-      id: "7754387d-27c2-4581-b8ec-e25a49fd2bbf",
-      properties: { name: "L\u00e4nsi-Pohja", "corona": 60.3 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "7754387d-27c2-4581-b8ec-e25a49fd2bbf",
+      "properties": { "name": "L\u00e4nsi-Pohja" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [25.22172848, 65.63326594],
             [25.33373797, 65.73473424],
@@ -644,18 +614,18 @@ var myGeoJSON = {
             [24.46006397, 65.81745836],
             [24.63927915, 65.71631503],
             [24.86329813, 65.64250677],
-            [25.22172848, 65.63326594],
-          ],
-        ],
-      },
+            [25.22172848, 65.63326594]
+          ]
+        ]
+      }
     },
     {
-      id: "3dd81c1e-9d45-4e30-8b66-9f261fffb49d",
-      properties: { name: "Kymenlaakso" , "corona": 65.5 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "3dd81c1e-9d45-4e30-8b66-9f261fffb49d",
+      "properties": { "name": "Kymenlaakso" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.52467368, 60.45193564],
             [27.98079701, 60.63920213],
@@ -668,18 +638,18 @@ var myGeoJSON = {
             [26.25585091, 60.94528506],
             [26.03183194, 60.84722011],
             [26.25585091, 60.72695299],
-            [26.52467368, 60.45193564],
-          ],
-        ],
-      },
+            [26.52467368, 60.45193564]
+          ]
+        ]
+      }
     },
     {
-      id: "5688b7e0-5706-4827-ac62-a9ad4c6a9d86",
-      properties: { name: "Varsinais-Suomi", "corona": 255.9 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "5688b7e0-5706-4827-ac62-a9ad4c6a9d86",
+      "properties": { "name": "Varsinais-Suomi" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [23.05237959, 60.10765098],
             [23.67963271, 60.17456975],
@@ -697,18 +667,18 @@ var myGeoJSON = {
             [22.24591128, 60.14112738],
             [22.46993026, 60.0070173],
             [22.80595872, 60.19684577],
-            [23.05237959, 60.10765098],
-          ],
-        ],
-      },
+            [23.05237959, 60.10765098]
+          ]
+        ]
+      }
     },
     {
-      id: "563439bf-0e3b-46c4-b067-0de3166599f3",
-      properties: { name: "Pohjois-Pohjanmaa", "corona": 31.10 },
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
+      "id": "563439bf-0e3b-46c4-b067-0de3166599f3",
+      "properties": { "name": "Pohjois-Pohjanmaa" },
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
           [
             [26.90187079, 64.0627508],
             [26.67785181, 64.32605186],
@@ -760,41 +730,10 @@ var myGeoJSON = {
             [26.11780438, 63.48862538],
             [26.34182335, 63.57848072],
             [26.27461766, 63.87596043],
-            [26.90187079, 64.0627508],
-          ],
-        ],
-      },
-    },
-  ],
-};
-
-L.geoJSON(myGeoJSON).addTo(map)
-
-function getColor(corona) {
-  return corona > 1000 ? '#800026' :
-  corona > 300  ? '#BD0026' :
-  corona > 200  ? '#E31A1C' :
-  corona > 100  ? '#FC4E2A' :
-  corona > 80   ? '#FD8D3C' :
-  corona > 50   ? '#FEB24C' :
-  corona > 20   ? '#FED976' :
-             '#FFEDA0';
+            [26.90187079, 64.0627508]
+          ]
+        ]
+      }
+    }
+  ]
 }
-
-function style(feature) {
-  return {
-      fillColor: getColor(feature.properties.corona),
-      weight: 2,
-      opacity: 1,
-      color: 'white',
-      dashArray: '3',
-      fillOpacity: 0.7
-  };
-}
-
-L.geoJson(myGeoJSON, {style: style}).addTo(map);
-//-- markers --//
-
-
-//map.setMaxBounds(maxBounds);
-map.fitBounds(maxBounds);
