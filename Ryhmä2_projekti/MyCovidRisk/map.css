@@ -45,14 +45,14 @@ h1 {
 /*KUVAT*/
 .covidmask {
     display: block;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
     width: 50%;
  }
 
  .ohje {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     width: 50%;
  }
