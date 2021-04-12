@@ -27,7 +27,7 @@ var offset = map.getSize().x*0.14;
 map.panBy(new L.Point(-offset, 0), {animate: false});
 
 
-//SHP-alueet 25.3
+//-- SHP 25.3 --//
 var myGeoJSON = {
   type: "FeatureCollection",
   features: [
@@ -770,6 +770,8 @@ var myGeoJSON = {
 
 L.geoJSON(myGeoJSON).addTo(map)
 
+
+//-- colors for SHP zones --//
 function getColor(corona) {
   return corona > 1000 ? '#800026' :
   corona > 300  ? '#BD0026' :
@@ -793,8 +795,71 @@ function style(feature) {
 }
 
 L.geoJson(myGeoJSON, {style: style}).addTo(map);
-//-- markers --//
+
+//-- MOUSE HOVER + CLICK ZOOM --//
+function highlightFeature(e) {
+  var layer = e.target;
+
+  layer.setStyle({
+      weight: 5,
+      color: '#666',
+      dashArray: '',
+      fillOpacity: 0.7
+  });
+
+  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+      layer.bringToFront();
+  }
+}
+
+function resetHighlight(e) {
+  geojson.resetStyle(e.target);
+}
+
+var geojson;
+geojson = L.geoJson(myGeoJSON);
+
+function zoomToFeature(e) {
+  map.fitBounds(e.target.getBounds());
+}
+
+function onEachFeature(feature, layer) {
+  layer.on({
+      mouseover: highlightFeature,
+      mouseout: resetHighlight,
+      click: zoomToFeature
+  });
+}
+
+geojson = L.geoJson(myGeoJSON, {
+  style: style,
+  onEachFeature: onEachFeature
+}).addTo(map);
 
 
-//map.setMaxBounds(maxBounds);
+//-- POPUPS NOT WORKING --//
+var map = L.map('map');
+map.createPane('labels');
+
+map.getPane('labels').style.zIndex = 650;
+map.getPane('labels').style.pointerEvents = 'none';
+
+var positron = L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX', {
+        attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e'
+}).addTo(map);
+
+var positronLabels = L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX', {
+        attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
+        pane: 'labels'
+}).addTo(map);
+
+var myGeoJSON = L.myGeoJSON(GeoJsonData, geoJsonOptions).addTo(map);
+
+myGeoJSON.eachLayer(function (layer) {
+  layer.bindPopup(layer.properties.name);
+});
+
+map.fitBounds(myGeoJSON.getBounds());
+
+map.setMaxBounds(maxBounds);
 map.fitBounds(maxBounds);
