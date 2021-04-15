@@ -27,13 +27,13 @@ var offset = map.getSize().x*0.14;
 map.panBy(new L.Point(-offset, 0), {animate: false});
 
 
-//-- SHP 25.3 --//
+//-- SHP 15.4 --//
 var myGeoJSON = {
   type: "FeatureCollection",
   features: [
     {
       id: "6e7182c0-3f9b-4202-87d5-98a79040a13e",
-      properties: { name: "HUS" , "corona": 344.0},
+      properties: { name: "HUS" , "corona": 194.8, "total": 5349},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -62,7 +62,7 @@ var myGeoJSON = {
     },
     {
       id: "7125d637-9aef-424e-9592-edd8a437f521",
-      properties: { name: "Keski-Pohjanmaa" , "corona": 14.2},
+      properties: { name: "Keski-Pohjanmaa" , "corona": 24.6, "total": 10},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -89,7 +89,7 @@ var myGeoJSON = {
     },
     {
       id: "5ce18b4c-fb4e-4e38-8242-4902062e97f9",
-      properties: { name: "Etel\u00e4-Savo" , "corona": 60.4},
+      properties: { name: "Etel\u00e4-Savo" , "corona": 47.1, "total": 88},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -121,7 +121,7 @@ var myGeoJSON = {
     },
     {
       id: "7bbcefc4-2734-47db-a7b5-90b1d40aa1ed",
-      properties: { name: "Pohjois-Savo" , "corona": 49.2},
+      properties: { name: "Pohjois-Savo" , "corona": 29.6, "total": 109},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -154,7 +154,7 @@ var myGeoJSON = {
     },
     {
       id: "d12945f0-c2ab-4ffb-bfbc-730cd8569303",
-      properties: { name: "It\u00e4-Savo" , "corona": 40.1},
+      properties: { name: "It\u00e4-Savo" , "corona": 195.4, "total": 30},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -178,7 +178,7 @@ var myGeoJSON = {
     },
     {
       id: "e9ae644c-97ea-43d9-aa35-168efe7b93da",
-      properties: { name: "Satakunta" , "corona": 46.9},
+      properties: { name: "Satakunta" , "corona": 40.8, "total": 90},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -203,7 +203,7 @@ var myGeoJSON = {
     },
     {
       id: "c014952e-9c68-4b6e-a2a0-a6551fe52810",
-      properties: { name: "Vaasa" , "corona": 38.9},
+      properties: { name: "Vaasa" , "corona": 33.6, "total": 45},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -241,7 +241,7 @@ var myGeoJSON = {
     },
     {
       id: "ec4994da-43b5-4820-a112-76a5d32e1f13",
-      properties: { name: "Etel\u00e4-Pohjanmaa" , "corona": 26.5},
+      properties: { name: "Etel\u00e4-Pohjanmaa" , "corona": 29.1, "total": 36},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -273,7 +273,7 @@ var myGeoJSON = {
     },
     {
       id: "d8101c32-14e1-42be-9155-ad87cefbcff6",
-      properties: { name: "Keski-Suomi" , "corona": 78.3},
+      properties: { name: "Keski-Suomi" , "corona": 42.7, "total": 175},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -307,7 +307,7 @@ var myGeoJSON = {
     },
     {
       id: "9883ca09-928e-4870-befc-b3ddd1f16657",
-      properties: { name: "Kainuu" , "corona": 25.1},
+      properties: { name: "Kainuu" , "corona": 19.5, "total": 18},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -350,7 +350,7 @@ var myGeoJSON = {
     },
     {
       id: "a05281e0-bbbb-478e-a500-e42fd6e24756",
-      properties: { name: "Lappi" , "corona": 33.3},
+      properties: { name: "Lappi" , "corona": 11.9, "total": 30},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -459,7 +459,7 @@ var myGeoJSON = {
     },
     {
       id: "3bb5d53a-bff0-4c79-8cf7-aa57310fe7e5",
-      properties: { name: "Kanta-H\u00e4me" , "corona": 156.1},
+      properties: { name: "Kanta-H\u00e4me" , "corona": 31, "total": 206},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -482,7 +482,7 @@ var myGeoJSON = {
     },
     {
       id: "4efab3f0-a85e-4a1e-ad6b-01eb8998ca95",
-      properties: { name: "Pohjois-Karjala" , "corona": 20.2},
+      properties: { name: "Pohjois-Karjala" , "corona": 22.6, "total": 48},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -528,7 +528,7 @@ var myGeoJSON = {
     },
     {
       id: "a78b7cb7-36e6-4254-9379-985c7af96079",
-      properties: { name: "Etel\u00e4-Karjala", "corona": 157.4 },
+      properties: { name: "Etel\u00e4-Karjala", "corona": 96, "total": 212},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -548,7 +548,7 @@ var myGeoJSON = {
     },
     {
       id: "8f3792e6-b929-45a8-b8d9-cf270fae2397",
-      properties: { name: "P\u00e4ij\u00e4t-H\u00e4me" , "corona": 192.7},
+      properties: { name: "P\u00e4ij\u00e4t-H\u00e4me" , "corona": 144.5, "total": 370},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -580,7 +580,7 @@ var myGeoJSON = {
     },
     {
       id: "76d99c52-0e4e-46c2-9585-698247acaf9c",
-      properties: { name: "Pirkanmaa", "corona": 99.8 },
+      properties: { name: "Pirkanmaa", "corona": 65.6, "total": 562},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -612,7 +612,7 @@ var myGeoJSON = {
     },
     {
       id: "7754387d-27c2-4581-b8ec-e25a49fd2bbf",
-      properties: { name: "L\u00e4nsi-Pohja", "corona": 60.3 },
+      properties: { name: "L\u00e4nsi-Pohja", "corona": 21.8, "total": 29},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -651,7 +651,7 @@ var myGeoJSON = {
     },
     {
       id: "3dd81c1e-9d45-4e30-8b66-9f261fffb49d",
-      properties: { name: "Kymenlaakso" , "corona": 65.5 },
+      properties: { name: "Kymenlaakso" , "corona": 133.5, "total": 155},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -675,7 +675,7 @@ var myGeoJSON = {
     },
     {
       id: "5688b7e0-5706-4827-ac62-a9ad4c6a9d86",
-      properties: { name: "Varsinais-Suomi", "corona": 255.9 },
+      properties: { name: "Varsinais-Suomi", "corona": 141.5, "total": 1211},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -704,7 +704,7 @@ var myGeoJSON = {
     },
     {
       id: "563439bf-0e3b-46c4-b067-0de3166599f3",
-      properties: { name: "Pohjois-Pohjanmaa", "corona": 31.10 },
+      properties: { name: "Pohjois-Pohjanmaa", "corona": 21.4, "total": 88},
       type: "Feature",
       geometry: {
         type: "Polygon",
@@ -773,13 +773,14 @@ L.geoJSON(myGeoJSON).addTo(map)
 
 //-- colors for SHP zones --//
 function getColor(corona) {
+  console.log(corona)
   return corona > 1000 ? '#800026' :
-  corona > 300  ? '#BD0026' :
-  corona > 200  ? '#E31A1C' :
-  corona > 100  ? '#FC4E2A' :
   corona > 80   ? '#FD8D3C' :
   corona > 50   ? '#FEB24C' :
   corona > 20   ? '#FED976' :
+  corona === 'Leviämisvaihe'   ? '#FD8D3C' :
+  corona === 'Kiihtymisvaihe'   ? '#FEB24C' :
+  corona === 'Perustaso'   ? '#FED976' :
              '#FFEDA0';
 }
 
@@ -796,7 +797,7 @@ function style(feature) {
 
 L.geoJson(myGeoJSON, {style: style}).addTo(map);
 
-//-- MOUSE HOVER + CLICK ZOOM --//
+//-- MOUSE HOVER + CLICK --//
 function highlightFeature(e) {
   var layer = e.target;
 
@@ -823,11 +824,16 @@ function zoomToFeature(e) {
   map.fitBounds(e.target.getBounds());
 }
 
+function clickToFeature(e) {
+  map.fitBounds(e.target.getBounds());
+}
+
 function onEachFeature(feature, layer) {
   layer.on({
       mouseover: highlightFeature,
       mouseout: resetHighlight,
-      click: zoomToFeature
+      click: zoomToFeature,
+      click: clickToFeature 
   });
 }
 
@@ -837,29 +843,64 @@ geojson = L.geoJson(myGeoJSON, {
 }).addTo(map);
 
 
-//-- POPUPS NOT WORKING --//
-var map = L.map('map');
-map.createPane('labels');
+//-- POPUPS --//
+var info = L.control();
 
-map.getPane('labels').style.zIndex = 650;
-map.getPane('labels').style.pointerEvents = 'none';
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+  this.update();
+  return this._div;
+};
 
-var positron = L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX', {
-        attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e'
-}).addTo(map);
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+  this._div.innerHTML = '<h4>Suomen koronatilanne</h4>' +  (props ?
+      '<b>' + props.name + '</b><br />' + 'Ilmaantuvuus ' + props.corona 
+      + '<br />' + 'Tapauksia yhteensä ' + props.total
 
-var positronLabels = L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=nyWayRxsiz0odG92pLMX', {
-        attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
-        pane: 'labels'
-}).addTo(map);
+      : 'Klikkaa sairaanhoitopiiriä');
+};
 
-var myGeoJSON = L.myGeoJSON(GeoJsonData, geoJsonOptions).addTo(map);
+info.addTo(map);
 
-myGeoJSON.eachLayer(function (layer) {
-  layer.bindPopup(layer.properties.name);
-});
+/*function highlightFeature(e) {
+  var layer = e.target;
+  info.update(layer.feature.properties);
+}*/
 
-map.fitBounds(myGeoJSON.getBounds());
+function clickToFeature(e) {
+  var layer = e.target;
+  info.update(layer.feature.properties);
+}
 
-map.setMaxBounds(maxBounds);
-map.fitBounds(maxBounds);
+/* ZOOM NOT WORKING
+function zoomToFeature(e) {
+  var layer = e.target;
+  map.fitBounds(e.target.getBounds());
+}
+*/
+
+function resetHighlight(e) {
+  geojson.resetStyle(e.target);
+  /*info.update();*/
+}
+
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = ['Perustaso', 'Kiihtymisvaihe', 'Leviämisvaihe'],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i]) + '"></i> ' +
+            (grades[i] ? grades[i] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
