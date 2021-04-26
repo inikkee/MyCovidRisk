@@ -27,7 +27,7 @@ var offset = map.getSize().x*0.14;
 map.panBy(new L.Point(-offset, 0), {animate: false});
 
 
-//-- SHP 15.4 --//
+//-- SHP 26.4 --//
 var myGeoJSON = {
   type: "FeatureCollection",
   features: [
